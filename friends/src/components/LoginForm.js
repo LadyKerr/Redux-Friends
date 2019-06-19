@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
               placeholder="Password" 
             />
           </FormGroup>
-          <Button> Login </Button>  
+          <Button color="warning"> Login </Button>  
         </Form>
       </div>
     );
