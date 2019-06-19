@@ -5,8 +5,10 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import friendsReducer from "./reducers";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
 import App from "./App";
+
 
 const store = createStore(
   friendsReducer,
