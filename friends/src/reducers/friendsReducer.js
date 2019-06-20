@@ -1,16 +1,20 @@
-//import actions here
+//import friends actions here
 
 
 const initialState = {
   friends: [],
   error: '',
-  loggingIn: false,
   fetchingFriends: false
 }
 
 export const friendsReducer = (state = initialState, action) => {
   switch(action.type) {
-    //return cases here with actions
+    // case FETCH_FRIENDS_START:
+    //   return {
+    //     ...state,
+    //     error: '',
+    //     fetchingFriends: true
+    //   }
     default:
       return state;
   }

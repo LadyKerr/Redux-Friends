@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { applyMiddleware, createStore, compose } from "redux";
 import thunk from 'redux-thunk';
-import friendsReducer from "./reducers";
+import logger from 'redux-logger';
+import rootReducer from "./reducers";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
 import App from "./App";
@@ -12,8 +13,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 const store = createStore(
-  friendsReducer,
-  composeEnhancers(applyMiddleware(thunk))
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk, logger))
 )
 
 ReactDOM.render(
