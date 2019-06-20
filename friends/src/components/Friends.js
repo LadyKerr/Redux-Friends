@@ -1,0 +1,1 @@
+//display friends from map here

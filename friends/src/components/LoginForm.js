@@ -2,6 +2,26 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class LoginForm extends React.Component {
+  state = {
+    credentials: {
+      username: '',
+      password: ''
+    }
+  }
+
+  handleChange = e => {
+    this.setState({
+      credentials: {
+        ...this.state.credentials,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
+
+  login = e => {
+    e.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -9,9 +29,8 @@ class LoginForm extends React.Component {
           <FormGroup>
             <Label for="username"> Username </Label>
             <Input 
-              type="username"
+              type="text"
               name="username"
-              id="username"
               placeholder="Username" 
             />
           </FormGroup>
@@ -20,7 +39,6 @@ class LoginForm extends React.Component {
             <Input 
               type="password"
               name="password"
-              id="password"
               placeholder="Password" 
             />
           </FormGroup>

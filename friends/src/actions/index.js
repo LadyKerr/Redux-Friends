@@ -1,0 +1,1 @@
+//import axios & create actionCReators (6 in total to handle 2 pages)
