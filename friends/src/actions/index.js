@@ -37,3 +37,21 @@ export const getFriends = () => dispatch => {
     dispatch({ type: FETCH_FRIENDS_FAILURE, payload: err.response })
   })
 }
+
+//AddFriendForm Action Creators
+export const ADDING_A_FRIEND_START = 'ADDING_A_FRIEND_START';
+export const ADDING_A_FRIEND_SUCCESS = 'ADDING_A_FRIEND_SUCCESS';
+export const ADDING_A_FRIEND_FAILURE = 'ADDING_A_FRIEND_FAILURE';
+
+export const addFriend = (newfriend) => dispatch => {
+  dispatch({ type: ADDING_A_FRIEND_START });
+  axiosWithAuth()
+    .post('/friends', newfriend)
+    .then(res => {
+      dispatch({ type: ADDING_A_FRIEND_SUCCESS, payload: res.data })
+    })
+    .catch(err => {
+      console.log(err)
+      dispatch({ type: ADDING_A_FRIEND_FAILURE, payload: err.response })
+    })
+}
