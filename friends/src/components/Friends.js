@@ -18,9 +18,9 @@ class Friends extends React.Component {
             <Loader type="Puff" color="#204963" height="60" width="60" />
         )}
 
-        {this.props.friends && (this.props.friends.map(friend => {
+        {this.props.friends && (this.props.friends.map(friend => (
           <FriendsList friend={friend} key={friend.id} />
-        }))}
+        )))}
 
         {this.props.error && <p>{this.props.error}</p>}
 
@@ -31,7 +31,7 @@ class Friends extends React.Component {
 
 
 const mapStateToProps = state => ({
-  friends: state.fetchingFriends.friends,
+  friends: state.friendsReducer.friends,
   error: state.friendsReducer.error,
   fetchingFriends: state.friendsReducer.fetchingFriends
 });

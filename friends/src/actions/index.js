@@ -20,9 +20,9 @@ export const login = creds => dispatch => {
 }
  
 //FriendsPage Action Creators:
-const FETCH_FRIENDS_START = 'FETCH_FRIENDS_START';
-const FETCH_FRIENDS_SUCCESS = 'FETCH_FRIENDS_SUCCESS';
-const FETCH_FRIENDS_FAILURE = 'FETCH_FRIENDS_FAILURE';
+export const FETCH_FRIENDS_START = 'FETCH_FRIENDS_START';
+export const FETCH_FRIENDS_SUCCESS = 'FETCH_FRIENDS_SUCCESS';
+export const FETCH_FRIENDS_FAILURE = 'FETCH_FRIENDS_FAILURE';
 
 export const getFriends = () => dispatch => {
   dispatch({ type: FETCH_FRIENDS_START });
