@@ -24,7 +24,11 @@ class LoginForm extends React.Component {
   loginChange = e => {
     e.preventDefault();
     this.props.login(this.state.credentials)
-      .then(() => this.props.history.push('/friends'))
+      .then(res => {
+        if (res) {
+          this.props.history.push('/protected');
+        }
+      })
     }
 
   render() {
