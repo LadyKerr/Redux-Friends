@@ -1,11 +1,14 @@
 import React from 'react';
+import { Card, CardTitle, CardText } from 'reactstrap';
 
 const FriendsList = props => {
   return(
-    <div>
-      <h4>{props.friend.name}</h4>
-      <p>{props.friend.age}</p>
-      <p>{props.friend.email}</p>
+    <div className="friends-card">
+      <Card body inverse color="info">
+        <CardTitle>{props.friend.name}</CardTitle>
+          <CardText>{props.friend.age}</CardText>
+          <CardText>{props.friend.email}</CardText>
+      </Card>
     </div>
   );
 }

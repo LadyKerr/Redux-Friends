@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
             <Input 
               type="text"
               name="username"
-              placeholder="Username"
+              placeholder="Username:"
               value={this.state.credentials.username}
               onChange={this.handleChange} 
             />
@@ -50,12 +50,12 @@ class LoginForm extends React.Component {
             <Input 
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Password:"
               value={this.state.credentials.password}
               onChange={this.handleChange}   
             />
           </FormGroup>
-          <Button color="warning" type="submit">
+          <Button color="info" type="submit">
             {this.props.loggingIn ? (
               <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />) 
                 : ('Log in')}

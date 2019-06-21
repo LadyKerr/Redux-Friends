@@ -13,7 +13,7 @@ class Friends extends React.Component {
   render() {
     return (
       <div>
-        
+        <h1 className="card-title-friends">Lambda Friends</h1>
         {this.props.fetchingFriends && ( 
             <Loader type="Puff" color="#204963" height="60" width="60" />
         )}
